@@ -27,6 +27,9 @@
         <li><a href="${u('kontakt/')}">Kontakt</a></li>
       </ul>
     </nav>
+    <a class="header-search" href="${u('pretrazivanje/')}" aria-label="Pretraživanje" title="Pretraživanje">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l5 5"></path></svg>
+    </a>
     <a class="lang-switch" href="${u('en/')}">English</a>`;
 
   const enMenu = `
@@ -40,6 +43,9 @@
         <li><a href="${u('en/contact/')}">Contact</a></li>
       </ul>
     </nav>
+    <a class="header-search" href="${u('en/search/')}" aria-label="Search" title="Search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M16 16l5 5"></path></svg>
+    </a>
     <a class="lang-switch" href="${u('')}">Srpski</a>`;
 
   header.innerHTML = `

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Search | OSCS</title>
+  <link rel="stylesheet" href="../../assets/css/site.css">
+  <link rel="icon" href="../../images/favicon.png">
+</head>
+<body>
+  <header class="site-header"><div class="header-inner" id="site-header-inner"></div></header>
+  <main class="content search-page">
+    <h1>Search</h1>
+    <div class="search-box" role="search">
+      <label class="sr-only" for="q">Search term</label>
+      <input id="q" type="search" placeholder="Enter a search term" autocomplete="off">
+      <button id="go" type="button">Search</button>
+    </div>
+    <p id="result-count" class="search-count" aria-live="polite"></p>
+    <div id="results"></div>
+  </main>
+  <footer class="site-footer"><div id="site-footer-inner"></div></footer>
+  <script src="../../assets/js/menu.js"></script>
+  <script src="../../assets/js/search.js"></script>
+</body>
+</html>
