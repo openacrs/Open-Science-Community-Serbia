@@ -1,0 +1,42 @@
+# OSCS static GitHub Pages export
+
+This repository was generated from the Joomla SQL dump `oscs-open-ac-rs.sql`.
+
+## What is included
+
+- 74 published public Joomla articles/pages
+- Serbian and English navigation
+- clean directory-based URLs for GitHub Pages
+- Joomla article links rewritten where a target could be resolved
+- `{loadmoduleid ...}` and `{loadposition ...}` news/conference/meeting modules replaced with static article listings
+- responsive CSS and a small mobile-menu script
+- `.nojekyll` for plain static hosting
+
+## Images
+
+The SQL dump contains references to images, but not the image files themselves.
+
+Copy the contents of the Joomla site's `images` folder into:
+
+`/images/`
+
+Do not add another nested `images/images` directory.
+
+## Publish on GitHub Pages
+
+1. Create a new GitHub repository.
+2. Upload the contents of this folder to the repository root.
+3. In GitHub, open **Settings → Pages**.
+4. Choose **Deploy from a branch**.
+5. Select the main branch and `/ (root)`.
+6. Save.
+
+The generated links are relative, so the site can work either at a project Pages URL or later behind a custom domain.
+
+## Important
+
+Do **not** upload the original SQL database dump to a public GitHub repository. It contains Joomla administrative and user-related database material that is not part of the static public website.
+
+## Review before publication
+
+This is a content-preserving static migration, not a pixel-perfect recreation of the Joomla/Helix template. Review pages after copying the images, particularly tables, embedded media, contact information and any content that previously depended on Joomla extensions.
