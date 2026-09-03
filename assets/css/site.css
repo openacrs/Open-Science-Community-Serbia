@@ -1,43 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#222;background:#fff;line-height:1.6}
-.site-header{border-bottom:1px solid #e6e6e6;background:#fff;position:sticky;top:0;z-index:20}
-.header-inner{max-width:1180px;margin:auto;display:flex;align-items:center;gap:1.5rem;padding:.65rem 1rem}
-.brand{display:flex;align-items:center;flex-shrink:0;color:#355ba9;text-decoration:none}
-.brand-logo{height:70px;width:auto;max-width:260px;object-fit:contain}
-.site-nav{margin-left:auto}
-.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+body{margin:0;font-family:"Open Sans",Arial,Helvetica,sans-serif;color:#171717;background:#fff;line-height:1.62;font-size:14px}
+a{color:#0867c7}
+
+/* Header – reconstructed from the archived OSCS design */
+.site-header{background:#fff;position:sticky;top:0;z-index:50;border:0;box-shadow:0 3px 12px rgba(0,0,0,.11)}
+.header-inner{max-width:1040px;min-height:98px;margin:0 auto;display:flex;align-items:center;gap:1.55rem;padding:.4rem 1rem}
+.brand{display:flex;align-items:center;flex:0 0 auto;text-decoration:none}
+.brand-logo{display:block;height:88px;width:auto;max-width:230px;object-fit:contain}
+.site-nav{margin-left:auto;display:flex;align-items:center}
+.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.9rem;align-items:center}
 .site-nav li{position:relative}
-.site-nav a,.lang-switch{color:#333;text-decoration:none;padding:.4rem .2rem}
-.site-nav a:hover,.lang-switch:hover{color:#355ba9}
-.site-nav li ul{display:none;position:absolute;top:100%;left:0;min-width:230px;background:#fff;border:1px solid #ddd;padding:.5rem;box-shadow:0 4px 16px rgba(0,0,0,.08);flex-direction:column;align-items:stretch}
-.site-nav li:hover>ul,.site-nav li:focus-within>ul{display:flex}
-.lang-switch{margin-left:.75rem;white-space:nowrap;flex-shrink:0}
-.menu-toggle{display:none}
-.content{max-width:1000px;margin:2rem auto;padding:0 1rem 3rem}
-.content h1{color:#355ba9;line-height:1.2}
+.site-nav a,.lang-switch{display:block;color:#111;text-decoration:none;font-size:12px;font-weight:500;letter-spacing:.045em;text-transform:uppercase;white-space:nowrap;padding:.9rem 0}
+.site-nav a:hover,.site-nav a:focus,.lang-switch:hover,.lang-switch:focus{color:#0c4f9e}
+.site-nav li>ul{display:none;position:absolute;top:calc(100% - .15rem);left:-1rem;min-width:265px;background:#fff;border:1px solid #e3e3e3;padding:.45rem 0;box-shadow:0 7px 20px rgba(0,0,0,.11);gap:0;align-items:stretch}
+.site-nav li:hover>ul,.site-nav li:focus-within>ul{display:flex;flex-direction:column}
+.site-nav li>ul a{padding:.62rem 1rem;font-size:11px;letter-spacing:.025em;white-space:normal}
+.site-nav li>ul a:hover{background:#f3f5f7}
+.lang-switch{margin-left:1.35rem;color:#0b4d91}
+.menu-toggle,.menu-close{display:none}
+
+/* Main content – wide, airy layout matching the original */
+.content{max-width:1110px;margin:0 auto;min-height:460px;padding:125px 1rem 85px}
+.content h1,.content h2,.content h3{font-weight:500;line-height:1.28;color:#171717}
+.content h1{font-size:28px;margin-top:0;margin-bottom:1.35rem}
+.content h2{font-size:22px;margin-top:2rem}
+.content h3{font-size:18px}
+.article-content{font-size:14px}
+.article-content p{margin:0 0 1rem}
 .article-content img{display:block;max-width:100%;height:auto}
-.article-content p>a>img{margin:.5rem 0}
+.article-content p>a>img{margin:.6rem 0}
 .article-content table{max-width:100%;border-collapse:collapse}
-.article-content td,.article-content th{padding:.4rem;vertical-align:top}
+.article-content td,.article-content th{padding:.45rem;vertical-align:top}
 .article-content iframe{max-width:100%}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin:1.5rem 0}
-.card{border:1px solid #e1e1e1;border-radius:8px;padding:1rem;background:#fff;overflow:hidden}
-.card h3{margin-top:0;line-height:1.3}
-.card a{color:#355ba9;text-decoration:none}
-.card-thumb{display:block;width:100%;height:170px;object-fit:cover;border-radius:6px;margin:0 0 .8rem}
-.date{font-size:.9rem;color:#666}
-.notice{padding:.8rem 1rem;background:#f5f6f8;border-left:4px solid #999}
-.site-footer{border-top:1px solid #e6e6e6;padding:1.5rem 1rem;text-align:center;color:#666}
+
+/* Listing cards are deliberately restrained so they fit the original visual language */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.4rem;margin:1.8rem 0}
+.card{border:1px solid #e5e5e5;border-radius:0;padding:1rem;background:#fff;overflow:hidden;box-shadow:none}
+.card h3{margin:.15rem 0 .6rem;font-size:16px}
+.card a{color:#0b5db3;text-decoration:none}
+.card a:hover{text-decoration:underline}
+.card-thumb{display:block;width:100%;height:170px;object-fit:cover;border-radius:0;margin:0 0 .9rem}
+.date{font-size:12px;color:#707070}
+.notice{padding:.9rem 1rem;background:#f5f5f5;border-left:3px solid #777}
+
+/* Footer – centralised and based on the archived right-aligned footer */
+.site-footer{background:#f4f4f4;border:0;color:#222;min-height:230px;padding:25px 1rem 28px}
+.footer-inner{max-width:1110px;margin:0 auto;display:flex;justify-content:flex-end}
+.footer-block{width:min(330px,100%);text-align:right;font-size:12px;line-height:1.65}
+.footer-nav{display:flex;flex-direction:column;align-items:flex-end;gap:.78rem;margin-bottom:1.15rem}
+.footer-nav a{color:#222;text-decoration:none;text-transform:uppercase;font-size:12px}
+.footer-nav a:hover{color:#0c4f9e}
+.footer-meta{margin-top:.35rem}
+.footer-meta a{color:#222;text-decoration:none}
+.footer-meta a:hover{text-decoration:underline}
+
+/* Mobile navigation: same side-panel idea as the original, with stronger contrast */
 @media(max-width:850px){
-  .header-inner{flex-wrap:wrap}
-  .brand-logo{height:55px;max-width:220px}
-  .menu-toggle{display:inline-block;border:1px solid #ccc;background:#fff;padding:.45rem .7rem;border-radius:4px}
-  .site-nav{margin-left:auto;order:3;flex-basis:100%}
-  .site-nav>ul{display:none;flex-direction:column;align-items:stretch}
-  .site-nav>ul.open{display:flex}
-  .site-nav li ul{position:static;display:flex;border:0;box-shadow:none;padding-left:1rem}
-  .lang-switch{margin-left:0}
-  .content{margin-top:1rem}
-  .card-thumb{height:150px}
+  body.nav-open{overflow:hidden}
+  body.nav-open::before{content:"";position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:58}
+  .header-inner{min-height:82px;padding:.35rem .85rem;gap:.7rem}
+  .brand-logo{height:70px;max-width:190px}
+  .site-nav{margin-left:auto;display:block}
+  .menu-toggle{display:inline-flex;align-items:center;justify-content:center;border:0;background:transparent;color:#111;font-size:0;width:42px;height:42px;padding:0;cursor:pointer}
+  .menu-toggle::before{content:"☰";font-size:27px;line-height:1}
+  .site-nav>ul{display:flex;position:fixed;z-index:60;top:0;right:-340px;width:330px;max-width:88vw;height:100vh;overflow-y:auto;background:#3f4650;flex-direction:column;align-items:stretch;gap:0;padding:58px 8px 20px;transition:right .22s ease;box-shadow:-5px 0 22px rgba(0,0,0,.22)}
+  .site-nav>ul.open{right:0}
+  .menu-close{display:none;position:fixed;z-index:62;right:12px;top:10px;width:36px;height:36px;border:2px solid rgba(255,255,255,.75);border-radius:50%;background:transparent;color:#fff;font-size:26px;line-height:28px;cursor:pointer}
+  body.nav-open .menu-close{display:block}
+  .site-nav>ul>li{width:100%;border-bottom:1px solid rgba(255,255,255,.20)}
+  .site-nav a{display:block;color:#fff;padding:.9rem 1rem;font-size:13px;letter-spacing:0;text-transform:uppercase;white-space:normal}
+  .site-nav a:hover,.site-nav a:focus{background:#505966;color:#fff}
+  .site-nav li>ul{position:static;display:flex;min-width:0;border:0;box-shadow:none;padding:0;background:#343a43;flex-direction:column}
+  .site-nav li>ul a{color:#f5f5f5;padding:.82rem 1rem .82rem 1.8rem;font-size:12px;border-top:1px solid rgba(255,255,255,.10)}
+  .site-nav li>ul a:hover{background:#48515d}
+  .lang-switch{margin-left:.25rem;font-size:11px;padding:.65rem .3rem}
+  .content{padding:58px 1rem 65px;min-height:420px}
+  .content h1{font-size:24px}
+  .card-grid{grid-template-columns:1fr}
+  .card-thumb{height:auto;max-height:260px}
+  .site-footer{min-height:0;padding:30px 1rem}
+  .footer-inner{justify-content:flex-start}
+  .footer-block{text-align:left;width:100%}
+  .footer-nav{align-items:flex-start}
+}
+
+@media(max-width:520px){
+  .brand-logo{height:62px;max-width:165px}
+  .header-inner{min-height:74px}
+  .lang-switch{font-size:10px}
+  .content{padding-top:45px}
 }

@@ -1,0 +1,19 @@
+OSCS Wayback-style reconstruction
+
+Based on user-provided screenshots of the archived oscs.open.ac.rs homepage and mobile menu.
+
+Implemented:
+- Open Sans typography
+- white sticky header with subtle shadow
+- larger OSCS logo
+- compact uppercase desktop navigation
+- generous white content spacing
+- light-grey right-aligned footer based on archived layout
+- centralised header/menu and footer in assets/js/menu.js
+- dark, higher-contrast mobile slide-out navigation
+- retained GitHub Pages-safe URL generation
+
+Menu/footer maintenance:
+Edit assets/js/menu.js once to update navigation/footer site-wide.
+Visual design:
+Edit assets/css/site.css.

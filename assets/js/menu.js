@@ -6,12 +6,12 @@
   const scriptUrl = new URL(script.src, window.location.href);
   const root = scriptUrl.href.replace(/assets\/js\/menu\.js(?:\?.*)?$/, '');
   const isEnglish = document.documentElement.lang.toLowerCase().startsWith('en');
-
   const u = (path = '') => new URL(path, root).href;
 
   const srMenu = `
     <nav aria-label="Primary" class="site-nav">
-      <button aria-controls="nav-list" aria-expanded="false" class="menu-toggle">Menu</button>
+      <button aria-controls="nav-list" aria-expanded="false" aria-label="Otvori meni" class="menu-toggle">Menu</button>
+      <button aria-label="Zatvori meni" class="menu-close" type="button">×</button>
       <ul id="nav-list">
         <li><a href="${u('vise-o-oscs/')}">O OSCS</a></li>
         <li><a href="${u('clanstvo/')}">Članstvo</a>
@@ -31,7 +31,8 @@
 
   const enMenu = `
     <nav aria-label="Primary" class="site-nav">
-      <button aria-controls="nav-list" aria-expanded="false" class="menu-toggle">Menu</button>
+      <button aria-controls="nav-list" aria-expanded="false" aria-label="Open menu" class="menu-toggle">Menu</button>
+      <button aria-label="Close menu" class="menu-close" type="button">×</button>
       <ul id="nav-list">
         <li><a href="${u('en/about-oscs/')}">About OSCS</a></li>
         <li><a href="${u('en/conferences-and-training/')}">Conferences and training</a></li>
@@ -46,4 +47,26 @@
       <img alt="Open Science Community Serbia" class="brand-logo" src="${u('images/Logo-OSCSerbia.png')}">
     </a>
     ${isEnglish ? enMenu : srMenu}`;
+
+  const footer = document.getElementById('site-footer-inner');
+  if (footer) {
+    const labels = isEnglish ? {
+      about:'About OSCS', join:'Join', contact:'Contact', team:'OSCS Team'
+    } : {
+      about:'O OSCS', join:'Pristupnica', contact:'Kontakt', team:'Tim OSCS'
+    };
+    footer.innerHTML = `
+      <div class="footer-inner">
+        <div class="footer-block">
+          <div class="footer-nav">
+            <a href="${u(isEnglish ? 'en/about-oscs/' : 'vise-o-oscs/')}">${labels.about}</a>
+            <a href="${u(isEnglish ? 'clanstvo/uclanite-se/' : 'clanstvo/uclanite-se/')}">${labels.join}</a>
+            <a href="${u(isEnglish ? 'en/contact/' : 'kontakt/')}">${labels.contact}</a>
+          </div>
+          <div>${labels.team}</div>
+          <div class="footer-meta">e-mail: <a href="mailto:dissemination@open.ac.rs">dissemination@open.ac.rs</a></div>
+          <div class="footer-meta">Zenodo: <a href="https://zenodo.org/communities/oscs">https://zenodo.org/communities/oscs</a></div>
+        </div>
+      </div>`;
+  }
 })();
