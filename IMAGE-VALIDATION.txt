@@ -1,0 +1,9 @@
+OSCS static reconstruction image validation
+
+HTML files: 83
+Image files: 69
+Image references in HTML after reconstruction: 196
+Resolving image references: 196
+Broken image references: 0
+
+All local image references resolve successfully.

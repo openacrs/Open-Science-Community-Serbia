@@ -40,3 +40,9 @@ Do **not** upload the original SQL database dump to a public GitHub repository. 
 ## Review before publication
 
 This is a content-preserving static migration, not a pixel-perfect recreation of the Joomla/Helix template. Review pages after copying the images, particularly tables, embedded media, contact information and any content that previously depended on Joomla extensions.
+
+
+## Complete image reconstruction
+This package includes the uploaded Joomla `images` directory. Local image paths were normalised for GitHub Pages project hosting, Joomla `#Uxxxx` filename encoding was repaired, and category/news listing pages were enhanced with thumbnails from the corresponding articles. See `IMAGE-VALIDATION.txt` for the final image-link check.
+
+When replacing the GitHub site, extract this ZIP and upload the **contents** to the repository root. Preserve the folder structure.
