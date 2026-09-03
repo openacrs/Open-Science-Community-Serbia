@@ -1,0 +1,9 @@
+Centralised menu validation
+===========================
+HTML pages checked: 79
+Pages converted to central header: 78
+Pages loading menu.js: 78
+Pages still containing hard-coded primary nav: 0
+Pages still containing brand-text: 0
+
+Edit assets/js/menu.js to change menus site-wide.
